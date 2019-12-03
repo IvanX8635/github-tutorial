@@ -8,22 +8,11 @@ Git is a very special system that allows the users to keep track of the changes 
 
 
 ---
-# _ Basics of Learning the command line - _
+# _Basics of Learning the command line_ -
 `cd [destination]` - To change your position within your IDE  
 `mkdir [file-name]` - Makes a folder followed by a name.  
 `mv [file-name] [Existing file name(To move)/new name(To rename)]` - either moves file if the second argument exist or renames the file if the second argument does not exist.
 ## Initial Setup
-1. Get onto the IDE you are using(The command line).
-1. Find a place to create a directory which will soon by initialized by git. Typing ``pwd`` will show you where you are and typing ``ls`` will show what files are in the folder you are in right now. You can also look at the right of the console where you can see the place you are in within the entire IDE.
-1. Either you create a new directory by using ``mkdir <directory name>`` or have a existing one to work with.
-1. cd into the directory you would want to be initialize by git - type : `` cd <directory name>`` try to use tab to autocomplete when you type in something that already exists.  
-1. **Now you can finally make the repository to git it running, sorry I just did that. Ready set ! type ``git init``**
-1. Congratulations, now you have git running and the folder you are in is now a repository.
-
-
-
----
-## Repository Setup
 Log in to a cloud (ie. Github)
 On the home screen, you can see a button that is called "New" on the right column of the home page.
 On the creation tab, give the repo an appropriate and acclimated name. You do not need to do anything else besides creating the repository.
@@ -32,6 +21,19 @@ When you first start the repo, you should see HTTPS and SSH key above.
 Click on the SSH and copy the URL
 
 Go into the repository you want to be bridge with for github in your IDE. Do ``git remote add [SSH URL]`` and be sure to verify it using ``git remote -v`` to have a verbose way of telling whether you have the remote or not.
+
+
+
+
+---
+## Repository Setup
+
+1. Get onto the IDE you are using(The command line).
+1. Find a place to create a directory which will soon by initialized by git. Typing ``pwd`` will show you where you are and typing ``ls`` will show what files are in the folder you are in right now. You can also look at the right of the console where you can see the place you are in within the entire IDE.
+1. Either you create a new directory by using ``mkdir <directory name>`` or have a existing one to work with.
+1. cd into the directory you would want to be initialize by git - type : `` cd <directory name>`` try to use tab to autocomplete when you type in something that already exists.  
+1. **Now you can finally make the repository to git it running, sorry I just did that. Ready set ! type ``git init``**
+1. Congratulations, now you have git running and the folder you are in is now a repository.
 
 
 
