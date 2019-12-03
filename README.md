@@ -54,9 +54,11 @@ Now as you are editing the files and the contents within the repository, you can
 ``git revert [SHA]``- Use ``git log`` to see the tag (SHA) - the characters that indicates or identifies a commit. This will allow you to roll back changes with a particular commit.
 
 **Let say you have committed something and want to go back**  
-Do ``git log`` within the repo and identify the checkpoint you want to go back to
-You can ``git reset --soft HEAD`` to undo the commit and still have what is on stage previously  
-``git reset --hard HEAD`` completely nukes it
+Do ``git log`` within the repo and identify the checkpoint.
+
+You can ``git reset --soft HEAD`` to undo the commit and still have what is on stage one commit previously previously.  
+
+``git reset --hard HEAD`` completely nukes it and resets everything; even what has been added on stage one commit previously.
 
 ---
 
