@@ -14,10 +14,12 @@ Git is a very special system that allows the users to keep track of the changes 
 
 Sign up for [Github](github.com) Verify if necessary  
 
-Log in to a cloud (ie. Github)
+Log into a cloud (ie. Github)
 
+Log into a cloud. Example: [CS50](https://ide.cs50.io/)  
+
+The SSH key allows your Github to trust your IDE. You will need your IDE and github account for this.  
 Set up an SSH key - [link](https://github.com/hstatsep/ide50) credit to Mr. Mueller
-
 ---
 ## Repository Setup
 
@@ -39,10 +41,12 @@ Go into the repository you want to be bridge with for github in your IDE. Do ``g
 
 Now you have a repo on the IDE and the repo on Github.
 
+**Now you can add and commit changes which we will discuss below.**
+
 ---
 ## Workflow & Commands
 Now as you are editing the files and the contents within the repository, you can start to begin to save changes and using the changes later on.
-``git add <file-name>`` will add the files to stage. The stage is where you store everything you want to save as a commit later on.
+``git add <file-name>`` will add the files that changed to stage. The stage is where you store everything you want to save as a commit later on.
 ``git add .`` - adds all of the changes to the stage
 ``git reset HEAD`` will unstage the changes
 
@@ -55,8 +59,8 @@ Now as you are editing the files and the contents within the repository, you can
 
 ---
 ## Rolling Back Changes
-``git revert [SHA]``- Use ``git log`` to see the tag (SHA) - the characters that indicates or identifies a commit. This will allow you to roll back changes with a particular commit.
-
+``git revert [SHA]``- Use ``git log`` to see the tag (SHA) - the characters that indicates or identifies a commit. This will allow you to roll back changes with a particular commit.  
+``git checkout [file-name]`` will undo edits within a file  
 **Let say you have committed something and want to go back**  
 Do ``git log`` within the repo and identify the checkpoint.  
 ``git reset HEAD~`` will undo the commit in a simple manner  
@@ -67,9 +71,11 @@ You can ``git reset --soft HEAD`` to undo the commit and still have what is on s
 ---
 
 ## Errors
-If you want to uninitialize git you can do ``rm -rf .git`` on the repo.
-Do ``git status`` constantly to keep track of changes made to prevent errors.
-**Note : This guide is not going to be about removing repos
+If you want to uninitialize git you can do ``rm -rf .git`` on the repo.  
+Do ``git status`` constantly to keep track of changes made to prevent errors.  
+**You can also remove the repo in your IDE and github all together.**  
+Go to the parent directory and type in ``rm -rf [repo-name]``  
+Go to your the github repo; click on settings and make your way down to the danger zone ; and click delete.   
 
 ## Fork/Clone/Pull requests  
 This is a way to collaborate or tinker with work from someone else.  
