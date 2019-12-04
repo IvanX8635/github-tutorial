@@ -4,18 +4,16 @@ _by IVAN_
 
 ---
 ## Git vs. GitHub
-Git is a very special system that allows the users to keep track of the changes made by themselves which can be very useful if you want to revert changes. Furthermore, git is used  based on how you save the changes which can be pushed to github where you can collaborate with others with the use of forking and submitting pull requests.
+Git is a very special system that allows the users to keep track of the changes made by themselves which can be very useful if you want to revert changes. Furthermore, git is used  based on how you save the changes which can be pushed to github where you can collaborate with others .
 
 
 ---
-# _Basics of Learning the command line_ -
-`cd [destination]` - To change your position within your IDE
-`mkdir [file-name]` - Makes a folder followed by a name.
-`mv [file-name] [Existing file name(To move)/new name(To rename)]` - either moves file if the second argument exist or renames the file if the second argument does not exist.
+
 ## Initial Setup
 **This is a quick tutorial for getting started on Github**
 
-Sign up for [Github](github.com)
+Sign up for [Github](github.com) Verify if necessary  
+
 Log in to a cloud (ie. Github)
 
 Set up an SSH key - [link](https://github.com/hstatsep/ide50) credit to Mr. Mueller
@@ -39,6 +37,7 @@ Click on the SSH and copy the URL
 
 Go into the repository you want to be bridge with for github in your IDE. Do ``git remote add [SSH URL]`` and be sure to verify it using ``git remote -v`` to have a verbose way of telling whether you have the remote or not.
 
+Now you have a repo on the IDE and the repo on Github.
 
 ---
 ## Workflow & Commands
@@ -52,16 +51,16 @@ Now as you are editing the files and the contents within the repository, you can
 ``git commit -m "[message]"`` - Will take a snapshot of whatever is on stage
 ``git log`` - will show you the previous commits(Very useful)
 
-``git push`` will save upload the commits to cloud(ie. github)**Must have a remote first! Look at the Repo setup above
+``git push`` will save and upload the commits to the cloud repository(ie. github)**Must have a remote first! Look at the Repo setup above
 
 ---
 ## Rolling Back Changes
 ``git revert [SHA]``- Use ``git log`` to see the tag (SHA) - the characters that indicates or identifies a commit. This will allow you to roll back changes with a particular commit.
 
 **Let say you have committed something and want to go back**  
-Do ``git log`` within the repo and identify the checkpoint.
-
-You can ``git reset --soft HEAD`` to undo the commit and still have what is on stage one commit previously previously.
+Do ``git log`` within the repo and identify the checkpoint.  
+``git reset HEAD~`` will undo the commit in a simple manner  
+You can ``git reset --soft HEAD`` to undo the commit and still have what is on stage one commit previously.
 
 ``git reset --hard HEAD`` completely nukes it and resets everything; even what has been added on stage one commit previously.
 
@@ -69,4 +68,14 @@ You can ``git reset --soft HEAD`` to undo the commit and still have what is on s
 
 ## Errors
 If you want to uninitialize git you can do ``rm -rf .git`` on the repo.
-Do ``git status`` constantly to keep track of changes made.
+Do ``git status`` constantly to keep track of changes made to prevent errors.
+**Note : This guide is not going to be about removing repos
+
+## Fork/Clone/Pull requests  
+This is a way to collaborate or tinker with work from someone else.  
+1. On Github you can go into another person's project and fork it. You can click on a icon that looks like this on the mid east of the top of the owner's repo page. ![](https://user-images.githubusercontent.com/17777237/54873012-40fa5b00-4dd6-11e9-98e0-cc436426c720.png)
+2. You can then, click on clone button(That large green button). Click on SSH if it is on HTTPS to get the clone URL. After that you can go to your IDE and ``git clone [SSH URL]`` to clone it
+3. In the IDE, modifications are allowed for the cloned repo; which means you can add commit and push. 
+4. If you would like to suggest a change to the creator, you can submit a pull request by clicking on this icon with the words pull request on it.  
+ ![](https://cdn0.iconfinder.com/data/icons/octicons/1024/git-pull-request-512.png)
+5. You can create a pull request which will send the suggestions off to the creator. They can accept or deny pull request merge.
